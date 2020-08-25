@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../main.css"/>
+<link rel="stylesheet" type="text/css" href="main.css"/>
 
 
 <h1>Calorie Counter</h1>
@@ -14,15 +14,33 @@
 </div>
 
 <h1>GOALS</h1>
-<h2>Calories: ?????</h2>
-<h2>Delta: ?????</h2>
+<h2>Daily Calories: ?????</h2>
+<h2>Weekly Delta: ?????</h2>
 <br>
 
 <h1>LOG</h1>
 <span>Weight</span>
-<input type="number"></input>
-<button>Submit</button>
+<input id="iWeight" type="number" ></input>
+<button class="btn" onclick="submitWeight()">Submit</button>
 <br>
 <span>Calories</span>
-<input type="number"></input>
-<button>Submit</button>
+<input id="btnCals" type="number"></input>
+<button onclick="submitCals()">Add</button>
+<br>
+<span id="consumedCals">Calories Consumed: </span>
+<br>
+<span id="currentWeight">Current Weight: </span>
+
+<script>
+    function submitCals(){
+        document.getElementById("consumedCals").innerHTML  = 
+        "Calories Consumed: " + document.getElementById("btnCals").value;
+
+        document.getElementById("btnCals").value = undefined;
+    }
+
+    function submitWeight(){
+        document.getElementById("currentWeight").innerHTML  = 
+        "Current Weight: " + document.getElementById("iWeight").value;
+    }
+</script>

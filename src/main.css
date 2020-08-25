@@ -1,0 +1,33 @@
+/* pg 99 of color schemes
+Primary: #ff8e69
+Secondary: #331308
+Tertiary:#0d3308
+Quaternary:  #0b2b7a
+quintenary #d1831d
+*/
+
+body {
+  background-color: #ff8e69;
+}
+
+h1, h2, h3 {
+  color: #331308;
+}
+
+div{
+  margin: auto;
+}
+
+button {
+  background-color: #0b2b7a; /* Blue background */
+  border: none; /* Remove borders */
+  color: d1831d; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+button:hover {
+  background-color: RoyalBlue;
+}
