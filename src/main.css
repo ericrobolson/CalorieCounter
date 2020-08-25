@@ -67,6 +67,9 @@ button:hover {
     background-color: #edcfc0;
     border-radius: 5px;
     /* 5px rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-container {
