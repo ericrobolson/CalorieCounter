@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="main.css"/>
+<link rel="stylesheet" type="text/css" href="main.css" />
 
 
 <h1>Calorie Counter</h1>
@@ -13,34 +13,76 @@
     <a href="url">Join Now</a>
 </div>
 
-<h1>GOALS</h1>
-<h2>Daily Calories: ?????</h2>
-<h2>Weekly Delta: ?????</h2>
+
+<div class="card">
+    <div class="card-container">
+        <h1>PROGRESS</h1>
+        <span>Monthly change: ?????</span>
+    </div>
+</div>
 <br>
 
-<h1>LOG</h1>
-<span>Weight</span>
-<input id="iWeight" type="number" ></input>
-<button class="btn" onclick="submitWeight()">Submit</button>
+<div class="card">
+    <div class="card-container">
+        <h1>GOALS</h1>
+        <span id="hDailyCals">Daily Calories: ?????</span>
+        <br>
+        <span id="hWeeklyDelta">Weekly Delta: ?????</span>
+    </div>
+</div>
+
 <br>
-<span>Calories</span>
-<input id="btnCals" type="number"></input>
-<button onclick="submitCals()">Add</button>
-<br>
-<span id="consumedCals">Calories Consumed: </span>
-<br>
-<span id="currentWeight">Current Weight: </span>
+
+<div class="card">
+    <div class="card-container">
+        <h1>LOG</h1>
+        <input id="iWeight" placeholder="Weight" type="number"></input>
+        <button class="btn" onclick="submitWeight()">Submit</button>
+        <br>
+        <input id="btnCals" placeholder="Calories" type="number"></input>
+        <button onclick="submitCals()">Add</button>
+        <br>
+        <span id="consumedCals">Calories Consumed: </span>
+        <br>
+        <span id="currentWeight">Current Weight: </span>
+    </div>
+</div>
+
+<br><br>
+<span>DISCLAIMER: This website is a 'use at your own risk' and is not approved by any health organization. Consult with a medical professional before making any changes to your dietary routine. Using this website means you agree to the above and absolve '' of any issues.</span>
 
 <script>
-    function submitCals(){
-        document.getElementById("consumedCals").innerHTML  = 
-        "Calories Consumed: " + document.getElementById("btnCals").value;
+    function submitCals() {
+        document.getElementById("consumedCals").innerHTML =
+            "Calories Consumed: " + document.getElementById("btnCals").value;
 
         document.getElementById("btnCals").value = undefined;
     }
 
-    function submitWeight(){
-        document.getElementById("currentWeight").innerHTML  = 
-        "Current Weight: " + document.getElementById("iWeight").value;
+    function submitWeight() {
+        document.getElementById("currentWeight").innerHTML =
+            "Current Weight: " + document.getElementById("iWeight").value;
     }
+
+    function getDailyCals() {
+        document.getElementById("hDailyCals").innerHTML = "Daily Calories: " + "2500";
+    }
+
+    function getWeeklyDelta() {
+        document.getElementById("hWeeklyDelta").innerHTML = "Weekly Delta: " + "-1" + "lb";
+    }
+
+    function getCurrentWeight() {
+        document.getElementById("currentWeight").innerHTML = "Current Weight: " + "190" + "lb";
+    }
+
+    function getCurrentCals() {
+        document.getElementById("consumedCals").innerHTML = "Calories Consumed: " + "300";
+    }
+
+
+    getDailyCals();
+    getWeeklyDelta();
+    getCurrentWeight();
+    getCurrentCals();
 </script>
