@@ -13,35 +13,39 @@
     <a href="url">Join Now</a>
 </div>
 
-
 <div class="card">
-    <div class="card-container">
-        <h1>PROGRESS</h1>
-        <span>Monthly change: ?????</span>
-    </div>
-</div>
-<br>
-
-<div class="card">
-    <div class="card-container">
-        <h1>GOALS</h1>
-        <span id="hDailyCals">Daily Calories: ?????</span>
-        <br>
-        <span id="hWeeklyDelta">Weekly Delta: ?????</span>
-    </div>
+    <h1>PROGRESS</h1>
+    <span>Monthly change: ?????</span>
+    <span>&check;</span>
 </div>
 
 <br>
 
 <div class="card">
-    <div class="card-container">
+    <h1>GOALS</h1>
+    <span id="hDailyCals">Daily Calories:</span>
+    <input readonly></input>
+    <br>
+    <span id="hWeeklyDelta">Weekly Delta: ????? </span>
+</div>
+
+<br>
+
+<div class="card">
+    <div>
         <h1>LOG</h1>
+    </div>
+    <div>
         <input id="iWeight" placeholder="Weight" type="number"></input>
         <button class="btn" onclick="submitWeight()">Submit</button>
-        <br>
+    </div>
+    <br>
+    <div>
         <input id="btnCals" placeholder="Calories" type="number"></input>
         <button onclick="submitCals()">Add</button>
-        <br>
+    </div>
+    <br>
+    <div>
         <span id="consumedCals">Calories Consumed: </span>
         <br>
         <span id="currentWeight">Current Weight: </span>
